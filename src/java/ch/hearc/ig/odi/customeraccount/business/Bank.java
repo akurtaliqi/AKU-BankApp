@@ -18,40 +18,6 @@ public class Bank {
     private ArrayList<Customer> customers;
     private ArrayList<Account> accounts;
 
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public ArrayList<Customer> getCustomers() {
-        return customers;
-    }
-
-    public void setCustomers(ArrayList<Customer> customers) {
-        this.customers = customers;
-    }
-
-    public ArrayList<Account> getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(ArrayList<Account> accounts) {
-        this.accounts = accounts;
-    }
-    
-    
-    
     public Bank (int number, String name) {
         this.number = number;
         this.name = name;
@@ -80,11 +46,11 @@ public class Bank {
     }
     
     public void addCustomer (int number, String fn, String ln) {
-        getCustomers().add(new Customer(number, fn, ln));
+        this.customers.add(new Customer(number, fn, ln));
     }
     
     public void addAccount (String number, String name, double rate, Customer customer) {
-        getAccounts().add(new Account(number, name, rate, customer));
+         this.accounts.add(new Account(number, name, rate, customer));
     }
     
     
