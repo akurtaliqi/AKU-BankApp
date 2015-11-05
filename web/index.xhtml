@@ -11,18 +11,17 @@
         <h:body>
             <h:form>
                 <h:commandButton value="français" type="submit"  action="#{indexBean.languageToFr}"/>
-                <dt/>
+                <h:outputText value="&#160;" />
                 <h:commandButton value="anglais" type="submit"  action="#{indexBean.languageToEn}"/>
             </h:form>    
-     
-
-            
-            
+      
             <br/><br/>
             <h:outputText value="#{resrc.titrePageAccueil}" />
             <br/><br/>
+            <h:outputText value="#{helloWorld.getworld()}" />
+            <br/><br/>
             
-            <h:link value="#{resrc.lienPageConnexion}" outcome="createCustomer.xhtml" />
+            <h:link value="#{resrc.creer}" outcome="createCustomer.xhtml" />
         </h:body>
     </f:view>
 </html>
