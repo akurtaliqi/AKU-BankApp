@@ -6,10 +6,19 @@
     
     
     <application>
+        <resource-bundle>
+            <base-name>ch.hearc.ig.odi.customeraccount.bundle.Resources</base-name>
+            <var>resrc></var>
+            
+        </resource-bundle>
         <locale-config>
             <default-locale>en</default-locale>
             <supported-locale>fr</supported-locale>
+            <supported-locale>en</supported-locale>
         </locale-config>
+        
+        
+        <message-bundle>ch.hearc.ig.odi.customeraccount.bundle.Mes_messages</message-bundle>
     </application>
 
 </faces-config>

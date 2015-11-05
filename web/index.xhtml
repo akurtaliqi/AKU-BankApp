@@ -5,14 +5,24 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <f:view>
         <h:head>
-            <title>Accueil</title>
+            <f:loadBundle basename="ch.hearc.ig.odi.customeraccount.bundle.Resources" var="resrc" />
+            <title>Facelet Title</title>
         </h:head>
         <h:body>
+            <h:form>
+                <h:commandButton value="français" type="submit"  action="#{indexBean.languageToFr}"/>
+                <dt/>
+                <h:commandButton value="anglais" type="submit"  action="#{indexBean.languageToEn}"/>
+            </h:form>    
+     
+
             
-            <h2>#{helloWorld.getworld()}</h2>
-            <a href="http://localhost:8080/AKU-CustomerAccountJSF/faces/createCustomer.xhtml">Click me</a>
-            <!--ici mettre en place français ou anglais...-->
+            
             <br/><br/>
+            <h:outputText value="#{resrc.titrePageAccueil}" />
+            <br/><br/>
+            
+            <h:link value="#{resrc.lienPageConnexion}" outcome="createCustomer.xhtml" />
         </h:body>
     </f:view>
 </html>
