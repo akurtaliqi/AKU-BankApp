@@ -25,11 +25,11 @@ public class HelloWorld implements Serializable {
 
     private String sentence = "Hello World!";
 
-    public String getworld() {
+    public String getSentence() {
         return sentence;
     }
 
-    public void setWorld(String world) {
+    public void setSentence(String world) {
         this.sentence = world;
     }
 

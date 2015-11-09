@@ -11,23 +11,23 @@
 
             <h:outputText value="créer client" />
 
-                <h:panelGrid id="panel" columns="2" border="0" cellpadding="0" cellspacing="2">
-                    <h:form>
-                        
-                        nom : <h:inputText   id="inputNom"      value="#{creerClientBean.customer.firstName}"    required="true" />
-                        prénom : <h:inputText   id="inputPrenom"   value="#{creerClientBean.customer.lastName}" required="true"/>
-                        
-                        <br/>
-                        <br/>
-                        <h:commandButton type="submit" value="créer client" /> 
-                        
-                        <!-- h outputlink pour les liens-->
+            <h:panelGrid id="panel" columns="2" border="0" cellpadding="0" cellspacing="2">
+                <h:form>
 
-                        <br/>
+                    nom : <h:inputText   id="inputNom"      value="#{creerClientBean.customer.firstName}"    required="true" />
+                    prénom : <h:inputText   id="inputPrenom"   value="#{creerClientBean.customer.lastName}" required="true"/>
 
-                    </h:form>
+                    <br/>
+                    <br/>
+                    <h:commandButton type="submit" value="créer client" action="InsertClient" /> 
 
-                </h:panelGrid>
+                    <!-- h outputlink pour les liens-->
+
+                    <br/>
+
+                </h:form>
+
+            </h:panelGrid>
 
         </h:body>
     </f:view>
