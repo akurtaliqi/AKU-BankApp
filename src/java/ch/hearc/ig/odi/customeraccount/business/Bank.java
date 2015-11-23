@@ -48,8 +48,9 @@ public class Bank {
         return customerTemp;
     }
     
-    public void addCustomer (Integer number, String fn, String ln) {
-        this.customers.put(number, new Customer (number, fn, ln));
+    public Customer addCustomer (Integer number, String fn, String ln) {
+       getCustomers().put(number, new Customer (number, fn, ln));
+        return customers.get(number);
     }
     
     public void addAccount (String number, String name, double rate, Customer customer) {
