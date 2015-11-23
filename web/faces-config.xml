@@ -20,5 +20,14 @@
         
         <message-bundle>ch.hearc.ig.odi.customeraccount.bundle.Mes_messages</message-bundle>
     </application>
+    
+    <navigation-rule>
+        <navigation-case>
+            <from-action></from-action>
+            <from-outcome></from-outcome>
+            <to-view-id></to-view-id>
+        </navigation-case>
+        
+    </navigation-rule>
 
 </faces-config>

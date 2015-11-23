@@ -6,6 +6,8 @@
 package ch.hearc.ig.odi.customeraccount.business;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -13,15 +15,15 @@ import java.util.ArrayList;
  */
 public class Bank {
 
-    private int number;
-    private String name;
-    private ArrayList<Customer> customers;
-    private ArrayList<Account> accounts;
+    private final Integer number;
+    private final String name;
+    private final ArrayList<Account> accounts;
+    private final Map<Integer, Customer> customers;
 
     public Bank (int number, String name) {
         this.number = number;
         this.name = name;
-        this.customers = new ArrayList<>();
+        this.customers = new HashMap<>();
         this.accounts = new ArrayList<>();
     }
 
@@ -32,26 +34,37 @@ public class Bank {
             accountTemp = a;
             }
         }
+        
         return accountTemp;
     }
     
     public Customer getCustomerByNumber (int number) {
         Customer customerTemp = null;
-        for (Customer c : customers) {
-            if (number == c.getNumber()) {
-                customerTemp = c;
+        for (Customer cus : this.customers.values()) {
+            if (cus.getNumber() == number) {
+                return cus;
             }
         }
         return customerTemp;
     }
     
-    public void addCustomer (int number, String fn, String ln) {
-        this.customers.add(new Customer(number, fn, ln));
+    public void addCustomer (Integer number, String fn, String ln) {
+        this.customers.put(number, new Customer (number, fn, ln));
     }
     
     public void addAccount (String number, String name, double rate, Customer customer) {
          this.accounts.add(new Account(number, name, rate, customer));
     }
+
+    public ArrayList<Account> getAccounts() {
+        return accounts;
+    }
+
+    public Map<Integer, Customer> getCustomers() {
+        return customers;
+    }
+    
+    
     
     
     
