@@ -17,6 +17,7 @@ import javax.inject.Named;
  */
 @Named(value="indexBean") 
 @RequestScoped
+
 public class IndexBean implements Serializable {
 
    

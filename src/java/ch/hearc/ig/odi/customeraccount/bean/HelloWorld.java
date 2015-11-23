@@ -6,7 +6,6 @@
 package ch.hearc.ig.odi.customeraccount.bean;
 
 import java.io.Serializable;
-import javax.annotation.ManagedBean;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
@@ -15,8 +14,8 @@ import javax.inject.Named;
  * @author ajtene.kurtaliq
  */
 @Named(value = "helloWorld")
-@ManagedBean
 @SessionScoped
+
 public class HelloWorld implements Serializable {
 
     public HelloWorld() {
