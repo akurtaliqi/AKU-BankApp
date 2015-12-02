@@ -13,7 +13,7 @@
         <h:body>
 
             <h:form>
-                <h:dataTable value="#{customerBean.customersList}" var="customer">
+                <h:dataTable value="#{customers.customers}" var="customer">
                     <h:column>
                         <f:facet name="header">#{resrc.lastname}</f:facet>
                             #{customer.lastName}

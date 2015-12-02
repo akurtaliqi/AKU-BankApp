@@ -7,6 +7,7 @@ package ch.hearc.ig.odi.customeraccount.bean;
 
 import ch.hearc.ig.odi.customeraccount.business.Customer;
 import ch.hearc.ig.odi.customeraccount.service.Services;
+import java.io.Serializable;
 import java.util.List;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -16,9 +17,9 @@ import javax.inject.Named;
  *
  * @author ajtene.kurtaliq
  */
-@Named(value = "customersList")
+@Named(value = "customers")
 @RequestScoped
-public class CustomersBean {
+public class CustomersBean implements Serializable {
 
     @Inject Services services;
 
@@ -26,7 +27,7 @@ public class CustomersBean {
     }
 
     public List<Customer> getCustomers() {
-        return (List<Customer>) services.getCustomers();
+        return services.getCustomersList();
     }
 
 }

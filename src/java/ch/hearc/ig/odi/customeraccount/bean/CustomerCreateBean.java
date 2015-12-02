@@ -6,12 +6,18 @@
 package ch.hearc.ig.odi.customeraccount.bean;
 
 import ch.hearc.ig.odi.customeraccount.service.Services;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 /**
  *
  * @author ajtene.kurtaliq
  */
+
+@Named
+@RequestScoped
+
 public class CustomerCreateBean {
     private int number;
     private String firstName;
