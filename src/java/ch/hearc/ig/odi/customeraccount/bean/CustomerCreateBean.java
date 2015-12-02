@@ -15,7 +15,7 @@ import javax.inject.Named;
  * @author ajtene.kurtaliq
  */
 
-@Named
+@Named(value="creerClientBean")
 @RequestScoped
 
 public class CustomerCreateBean {
