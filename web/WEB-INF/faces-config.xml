@@ -18,7 +18,7 @@
         </locale-config>
         
         
-        <message-bundle>ch.hearc.ig.odi.customeraccount.bundle.Mes_messages</message-bundle>
+        <message-bundle>ch.hearc.ig.odi.customeraccount.bundle.Resources</message-bundle>
     </application>
     
     <managed-bean>

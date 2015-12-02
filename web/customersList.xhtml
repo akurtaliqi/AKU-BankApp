@@ -23,7 +23,8 @@
                             #{customer.firstName}
                     </h:column>
                 </h:dataTable>
-                <h:commandButton type="submit" value="#{resrc.create}" action="createCustomer.xhtml"/>
+                <h:button value="#{resrc.create}" outcome="createCustomer.xhtml"/>
+                <h:button value="#{resrc.index}" outcome="index.xhtml"/>
             </h:form>
 
         </h:body>
