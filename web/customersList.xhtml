@@ -11,19 +11,36 @@
             <title>Facelet Title</title>
         </h:head>
         <h:body>
-
             <h:form>
-                <h:dataTable value="#{customers.customers}" var="customer">
+                <h:commandButton value="français" type="submit"  action="#{indexBean.languageToFr}"/>
+                <h:outputText value="&#160;" />
+                <h:commandButton value="anglais" type="submit"  action="#{indexBean.languageToEn}"/>
+            </h:form>
+            <h2>
+                <h:outputText value="#{resrc['customers.list.title']}" />
+            </h2>
+            <h:form>
+                <h:dataTable value="#{customersBean.customers}" var="customer">
                     <h:column>
-                        <f:facet name="header">#{resrc.lastname}</f:facet>
-                            #{customer.lastName}
+                        <f:facet name="header">
+                            <h:outputText value="#{resrc['customer.number']}" />
+                        </f:facet>
+                        <h:commandLink id="cmdLnkViewCustomerNumber" value="#{customer.number}" />
                     </h:column>
                     <h:column>
-                        <f:facet name="header">#{resrc.firstname}</f:facet>
-                            #{customer.firstName}
+                        <f:facet name="header">
+                            <h:outputText value="#{resrc['customer.lastName']}" />
+                        </f:facet>
+                        <h:commandLink id="cmdLnkViewCustomerLastName" value="#{customer.lastName}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{resrc['customer.firstName']}" />
+                        </f:facet>
+                        <h:commandLink id="cmdLnkViewCustomerFirstName" value="#{customer.firstName}" />
                     </h:column>
                 </h:dataTable>
-                <h:button value="#{resrc.create}" outcome="createCustomer.xhtml"/>
+                <h:commandButton value="#{resrc['btn.label.add']}" action="createCustomer"/>
             </h:form>
 
         </h:body>

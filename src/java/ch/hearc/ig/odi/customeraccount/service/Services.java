@@ -16,6 +16,7 @@ import javax.enterprise.context.SessionScoped;
  */
 @SessionScoped
 @Stateful
+//elle vit durant toute l'application 
 public class Services implements Serializable{
     
     private Bank bank;

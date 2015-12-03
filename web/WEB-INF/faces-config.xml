@@ -20,11 +20,5 @@
         
         <message-bundle>ch.hearc.ig.odi.customeraccount.bundle.Resources</message-bundle>
     </application>
-    
-    <managed-bean>
-        <managed-bean-name>CustomerBean</managed-bean-name>
-        <managed-bean-class>ch.hearc.ig.odi.customeraccount</managed-bean-class>
-        <managed-bean-scope>session</managed-bean-scope>
-    </managed-bean>
 
 </faces-config>
