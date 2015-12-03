@@ -19,8 +19,9 @@
 
                 <br/>
                 <br/>
+                 <h:commandButton id="reset" value="#{resrc['btn.label.reset']}" type="reset" />
                 <h:commandButton type="submit" value="Valider" actionListener="#{customerCreateBean.newCustomer}" action="createCustomerOk.xhtml"/> 
-                <h:button value="#{resrc['btn.label.cancel']}" outcome="customersList.xhtml"/>
+                <h:button id="cancel" value="#{resrc['btn.label.cancel']}" outcome="customersList.xhtml"/>
 
                 <!-- h outputlink pour les liens-->
 
