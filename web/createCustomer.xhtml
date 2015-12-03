@@ -16,15 +16,14 @@
 
             <h:panelGrid id="panel" columns="2" border="0" cellpadding="0" cellspacing="2">
                 <h:form>
-                    numero : <h:inputText     value="#{creerClientBean.number}"    required="true" />
-                    nom : <h:inputText      value="#{creerClientBean.lastName}"    required="true" />
-                    prénom : <h:inputText   value="#{creerClientBean.firstName}" required="true"/>
+                    numero : <h:inputText     value="#{customerCreateBean.number}"    required="true" />
+                    nom : <h:inputText      value="#{customerCreateBean.lastName}"    required="true" />
+                    prénom : <h:inputText   value="#{customerCreateBean.firstName}" required="true"/>
 
                     <br/>
                     <br/>
-                    <h:commandButton type="submit" value="Valider" actionListener="#{creerClientBean.newCustomer}" action="createCustomerOk.xhtml"/> 
-                    <h:button value="Retour à la liste" outcome="customersList.xhtml"/>
-                    
+                    <h:commandButton type="submit" value="Valider" actionListener="#{customerCreateBean.newCustomer}" action="createCustomerOk.xhtml"/> 
+                    <h:button value="#{resrc['btn.label.back']}" outcome="customersList.xhtml"/>
 
                     <!-- h outputlink pour les liens-->
 
